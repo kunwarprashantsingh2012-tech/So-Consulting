@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Industrial Database</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>S.O. Consulting</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="database.html">Database</a>
+</nav>
+</header>
+
+<section class="section">
+<h2>Industrial Asset Database</h2>
+<input id="search" placeholder="Search plant/company/country">
+
+<table id="table">
+<tr><th>Name</th><th>Company</th><th>Country</th><th>Capacity (Mt)</th></tr>
+</table>
+</section>
+
+<script>
+fetch('data/assets.json')
+.then(r=>r.json())
+.then(data=>{
+let table=document.getElementById("table");
+data.forEach(p=>{
+table.innerHTML+=`<tr><td>${p.name}</td><td>${p.company}</td><td>${p.country}</td><td>${p.capacity}</td></tr>`;
+});
+});
+
+const search=document.getElementById("search");
+search.addEventListener("keyup",function(){
+let filter=search.value.toLowerCase();
+document.querySelectorAll("#table tr").forEach(r=>{
+let text=r.innerText.toLowerCase();
+r.style.display=text.includes(filter)?"":"none";
+});
+});
+</script>
+
+</body>
+</html>

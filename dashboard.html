@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Industry Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+<h2>S.O. Consulting</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="dashboard.html">Dashboards</a>
+</nav>
+</header>
+
+<section class="section">
+<h2>Global Cement Capacity by Region</h2>
+<canvas id="chart" class="chart"></canvas>
+</section>
+
+<script>
+new Chart(document.getElementById("chart"),{
+type:"bar",
+data:{
+labels:["Asia","Europe","North America","Middle East","Africa"],
+datasets:[{label:"Capacity (Mt)",data:[2800,450,320,260,180]}]
+}
+});
+</script>
+
+</body>
+</html>

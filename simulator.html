@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cement Market Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>S.O. Consulting</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="simulator.html">Simulator</a>
+</nav>
+</header>
+
+<section class="section">
+<h2>Cement Market Shock Simulator</h2>
+
+<label>Coal Price ($/t)</label><br>
+<input id="coal" value="120"><br><br>
+
+<label>Infrastructure Growth (%)</label><br>
+<input id="infra" value="3"><br><br>
+
+<button onclick="simulate()">Run Simulation</button>
+
+<h3 id="result"></h3>
+
+</section>
+
+<script>
+function simulate(){
+let coal=document.getElementById("coal").value;
+let infra=document.getElementById("infra").value;
+let price = (coal*0.05 + infra*2).toFixed(2);
+document.getElementById("result").innerHTML="Estimated Cement Price Change: "+price+"%";
+}
+</script>
+
+</body>
+</html>

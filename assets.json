@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Ste Genevieve Cement Plant",
+    "company": "Holcim",
+    "country": "USA",
+    "capacity": 5.0,
+    "lat": 37.9,
+    "lon": -90.2,
+    "type": "cement"
+  },
+  {
+    "name": "Beawar Cement Plant",
+    "company": "Shree Cement",
+    "country": "India",
+    "capacity": 3.5,
+    "lat": 26.1,
+    "lon": 74.3,
+    "type": "cement"
+  },
+  {
+    "name": "Wuhu Cement Plant",
+    "company": "Anhui Conch",
+    "country": "China",
+    "capacity": 4.0,
+    "lat": 31.3,
+    "lon": 118.4,
+    "type": "cement"
+  },
+  {
+    "name": "Obajana Cement Plant",
+    "company": "Dangote Cement",
+    "country": "Nigeria",
+    "capacity": 13.0,
+    "lat": 7.9,
+    "lon": 6.7,
+    "type": "cement"
+  },
+  {
+    "name": "Ribblesdale Cement Plant",
+    "company": "Heidelberg Materials",
+    "country": "UK",
+    "capacity": 1.0,
+    "lat": 54.0,
+    "lon": -2.3,
+    "type": "cement"
+  }
+]
